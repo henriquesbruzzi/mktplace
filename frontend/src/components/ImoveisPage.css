@@ -1,0 +1,2097 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Imoveis Page Styles */
+.imoveis-page {
+  min-height: 100vh;
+  background: #36393F;
+  padding-top: 80px;
+}
+
+/* Titulo Secao */
+.titulo-secao {
+  background: #ffffff;
+  padding: 60px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.titulo-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.titulo-principal {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 32px;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  flex-shrink: 0;
+  width: auto;
+}
+
+/* Filter Bar */
+.filter-bar {
+  flex: 1;
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 12px 16px;
+  max-width: 800px;
+}
+
+.filter-navbar-grid {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+.search-container {
+  flex: 1;
+  min-width: 150px;
+  max-width: 200px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  background: #fff;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #333;
+}
+
+.filter-dropdown {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.dropdown-toggle:hover {
+  border-color: #333;
+}
+
+.filter-bar-text {
+  color: #333;
+  font-weight: 500;
+}
+
+.dropdown-icon {
+  font-size: 10px;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+.filter-actions {
+  flex-shrink: 0;
+}
+
+.filter-link {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.filter-link:hover {
+  color: #333;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Barra Submenu */
+.barra-submenu {
+  background: #ffffff;
+  padding: 40px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.standard-width {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.titulos-pesquisa-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.mad-page-titulo {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: #333;
+  margin: 0;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+/* Submenu Tabs */
+.submenu-tabs {
+  display: flex;
+  gap: 0;
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.galeria-tab,
+.mapa-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.galeria-tab.activo,
+.mapa-tab.activo {
+  background: #ffffff;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-tab:hover:not(.activo),
+.mapa-tab:hover:not(.activo) {
+  color: #333;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.icon-galeria,
+.icon-mapa {
+  font-size: 16px;
+}
+
+/* Submenu Mobile */
+.submenu-mobile {
+  display: none;
+  align-items: center;
+  gap: 20px;
+}
+
+.galeria-mobile,
+.mapa-mobile,
+.filtros-mobile {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.galeria-mobile.activo,
+.mapa-mobile.activo {
+  background: #333;
+  color: #fff;
+}
+
+.galeria-mobile:hover:not(.activo),
+.mapa-mobile:hover:not(.activo),
+.filtros-mobile:hover {
+  background: #e8e8e8;
+}
+
+/* Hero Section */
+.imoveis-hero {
+  background: #36393F;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.imoveis-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 207, 121, 0.1) 0%, transparent 50%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.imoveis-hero-title {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 56px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.imoveis-hero-subtitle {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 24px;
+  color: #FFCF79;
+  position: relative;
+  z-index: 1;
+  font-weight: 300;
+}
+
+/* Imoveis em Destaque */
+.imoveis-em-destaque {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.bloco-titulo {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.mad-titulo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #1a1a2e;
+  display: block;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.mad-titulo.mobile {
+  display: none;
+}
+
+.mad-subtitulo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #555;
+  font-weight: 300;
+  display: block;
+  letter-spacing: 0.3px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Imoveis Container - Grid Layout */
+.imoveis-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* Real Estate Card */
+.real-estate-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: visible; /* Permitir que o tooltip apareça fora do card */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  border: 1px solid #f0f0f0;
+  z-index: 1; /* Base z-index para os cards */
+}
+
+.real-estate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  z-index: 100; /* Aumentar z-index no hover para tooltip aparecer acima dos outros cards */
+}
+
+/* Quando o tooltip de moeda está ativo, garantir que o card fique acima de todos */
+.real-estate-card:has(.currency-tooltip) {
+  z-index: 1000 !important;
+}
+
+/* Favorite Button */
+.favorite-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.favorite-button:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+.favorite-button.favorited {
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.favorite-button.favorited:hover {
+  background: rgba(255, 0, 0, 0.2);
+}
+
+.favorite-button svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0; /* Manter bordas arredondadas no topo */
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-mask {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slider Arrows */
+.slider-arrow-left,
+.slider-arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  opacity: 0;
+}
+
+.real-estate-card:hover .slider-arrow-left,
+.real-estate-card:hover .slider-arrow-right {
+  opacity: 1;
+}
+
+.slider-arrow-left {
+  left: 16px;
+}
+
+.slider-arrow-right {
+  right: 16px;
+}
+
+.slider-arrow-icon {
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.slider-arrow-left:hover,
+.slider-arrow-right:hover {
+  background: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Property Body */
+.propoerty-body {
+  padding: 20px;
+  overflow: visible; /* Permitir que tooltips apareçam fora do body */
+  border-radius: 0 0 12px 12px; /* Manter bordas arredondadas na parte inferior */
+}
+
+/* Property Header */
+.property-header {
+  margin-bottom: 16px;
+}
+
+.property-type-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.property-location-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Property Details */
+.property-details {
+  margin-bottom: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.re-lower-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.detail-item {
+  flex: 1;
+  text-align: center;
+}
+
+.re-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.real-estate-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+}
+
+.detail-value {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400 !important;
+  color: #333;
+}
+
+.detail-unit {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400 !important;
+  color: #666;
+}
+
+.detail-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Property Price */
+.property-price {
+  margin-bottom: 20px;
+  position: relative; /* Contexto para posicionamento do tooltip */
+  z-index: 10; /* Garantir que o preço e seu tooltip fiquem acima de outros elementos */
+}
+
+.price-container {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  position: relative; /* Contexto para posicionamento do tooltip */
+}
+
+/* Quando o tooltip de moeda está visível no price-container */
+.price-container:hover {
+  z-index: 20;
+}
+
+.price-symbol {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #666;
+}
+
+.price-value {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 24px;
+  font-weight: 400 !important;
+  color: #333;
+}
+
+.mad-preco {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 24px;
+  font-weight: 400 !important;
+  color: #333;
+}
+
+/* Property Action */
+.property-action {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.botao-phone {
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.botao-phone:hover {
+  background: #f8f8f8;
+  border-color: #333;
+  transform: translateY(-1px);
+}
+
+.icon-phone {
+  font-size: 18px;
+  color: #333;
+}
+
+.more-details-button {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+.more-details-button:hover {
+  background: #f8f8f8;
+  border-color: #333;
+  transform: translateY(-1px);
+}
+
+.more-details-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Ver Todos Container */
+.ver-todos-container {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.total-properties {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  font-weight: 400;
+}
+
+.comp-main-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #FFCF79 0%, #FFB969 100%);
+  color: #1a1a2e;
+  padding: 18px 48px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(255, 207, 121, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.comp-main-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(255, 207, 121, 0.5);
+  background: linear-gradient(135deg, #FFB969 0%, #FFCF79 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .imoveis-container {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .imoveis-hero-title {
+    font-size: 42px;
+  }
+  
+  .imoveis-hero-subtitle {
+    font-size: 20px;
+  }
+  
+  .mad-titulo {
+    font-size: 32px;
+  }
+  
+  .mad-subtitulo {
+    font-size: 16px;
+  }
+  
+  .imoveis-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  
+  /* Titulo Responsive */
+  .titulo-principal {
+    font-size: 28px;
+  }
+  
+  .titulo-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  
+  .filter-navbar-grid {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .search-container {
+    min-width: 150px;
+    max-width: 180px;
+  }
+  
+  .titulo-secao {
+    padding: 40px 20px;
+  }
+  
+  /* Barra Submenu Responsive */
+  .submenu-tabs {
+    display: none;
+  }
+  
+  .submenu-mobile {
+    display: flex;
+  }
+  
+  .mad-page-titulo {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .imoveis-page {
+    padding-top: 60px;
+  }
+  
+  .imoveis-hero {
+    padding: 60px 20px;
+  }
+  
+  .imoveis-hero-title {
+    font-size: 32px;
+  }
+  
+  .imoveis-hero-subtitle {
+    font-size: 18px;
+  }
+  
+  .mad-titulo.desktop {
+    display: none;
+  }
+  
+  .mad-titulo.mobile {
+    display: block;
+    font-size: 26px;
+  }
+  
+  .mad-subtitulo {
+    font-size: 15px;
+  }
+  
+  .imoveis-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 8px;
+  }
+  
+  .botao-phone.mobile {
+    display: flex;
+  }
+  
+  .icons-container ul {
+    gap: 12px;
+  }
+  
+  /* Titulo Mobile */
+  .titulo-principal {
+    font-size: 24px;
+  }
+  
+  .titulo-container {
+    gap: 20px;
+  }
+  
+  .filter-navbar-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .search-container {
+    min-width: auto;
+  }
+  
+  .filter-dropdown {
+    width: 100%;
+  }
+  
+  .dropdown-toggle {
+    justify-content: space-between;
+  }
+  
+  .filter-actions {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .titulo-secao {
+    padding: 32px 16px;
+  }
+  
+  /* Barra Submenu Mobile */
+  .barra-submenu {
+    padding: 24px 16px;
+  }
+  
+  .standard-width {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .titulos-pesquisa-container {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .mad-page-titulo {
+    font-size: 24px;
+  }
+  
+  .submenu-mobile {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .imoveis-hero {
+    padding: 40px 16px;
+  }
+  
+  .imoveis-hero-title {
+    font-size: 28px;
+  }
+  
+  .imoveis-hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .imoveis-em-destaque {
+    padding: 40px 16px;
+  }
+  
+  .mad-titulo.mobile {
+    font-size: 24px;
+  }
+  
+  .mad-subtitulo {
+    font-size: 14px;
+  }
+  
+  .mad-card-titulo {
+    font-size: 16px;
+  }
+  
+  .mad-preco {
+    font-size: 22px;
+  }
+  
+  .comp-main-button {
+    padding: 14px 32px;
+    font-size: 16px;
+  }
+  
+  .slider-banners {
+    height: 250px;
+  }
+  
+  .bx-controls-direction {
+    top: -100px;
+  }
+  
+  /* Titulo Mobile Small */
+  .titulo-principal {
+    font-size: 20px;
+  }
+  
+  .titulo-container {
+    gap: 16px;
+  }
+  
+  .filter-bar {
+    padding: 8px 12px;
+  }
+  
+  .filter-navbar-grid {
+    gap: 8px;
+  }
+  
+  .search-input,
+  .dropdown-toggle,
+  .filter-link {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  
+  .titulo-secao {
+    padding: 24px 12px;
+  }
+  
+  /* Barra Submenu Mobile Small */
+  .barra-submenu {
+    padding: 20px 12px;
+  }
+  
+  .mad-page-titulo {
+    font-size: 20px;
+  }
+  
+  .submenu-mobile {
+    gap: 12px;
+  }
+  
+  .galeria-mobile,
+  .mapa-mobile,
+  .filtros-mobile {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
+/* Loading and Error States */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 207, 121, 0.3);
+  border-top: 4px solid #FFCF79;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-container p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.error-message {
+  background: rgba(231, 76, 60, 0.1);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.error-message p {
+  color: #e74c3c;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.error-message small {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.no-properties-message {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 40px 0;
+}
+
+.no-properties-message h3 {
+  font-family: "Playfair Display", serif;
+  color: #FFCF79;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+.no-properties-message p {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Seção de Filtros */
+.filters-section {
+  background: #ffffff;
+  padding: 40px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.filters-header h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin: 0 0 30px 0;
+  letter-spacing: -0.5px;
+}
+
+.filters-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.search-bar {
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #1a1a2e;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #FFCF79;
+  box-shadow: 0 0 0 3px rgba(255, 207, 121, 0.1);
+}
+
+.search-input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+.filter-dropdown {
+  min-width: 150px;
+  position: relative;
+}
+
+.filter-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #1a1a2e;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.dropdown-btn {
+  text-align: left;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.dropdown-btn:hover {
+  border-color: #FFCF79;
+  background-color: #fafafa;
+}
+
+.dropdown-btn.active {
+  border-color: #FFCF79;
+  background-color: #f8f9fa;
+  box-shadow: 0 0 0 3px rgba(255, 207, 121, 0.1);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #1a1a2e;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #FFCF79;
+}
+
+.dropdown-item:first-child {
+  font-weight: 600;
+  color: #666;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #FFCF79;
+  box-shadow: 0 0 0 3px rgba(255, 207, 121, 0.1);
+}
+
+.more-filters-btn {
+  background: linear-gradient(135deg, #FFCF79, #FFB969);
+  color: #1a1a2e;
+  border: none;
+  font-weight: 600;
+  background-image: none;
+  padding-right: 16px;
+}
+
+.more-filters-btn:hover {
+  background: linear-gradient(135deg, #FFB969, #FFA759);
+  transform: translateY(-1px);
+}
+
+.filter-actions {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.favorites-btn,
+.clear-filters-btn {
+  padding: 12px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a2e;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.favorites-btn:hover,
+.clear-filters-btn:hover {
+  border-color: #FFCF79;
+  color: #FFCF79;
+  transform: translateY(-1px);
+}
+
+.clear-filters-btn {
+  background: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.clear-filters-btn:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+  color: #6c757d;
+}
+
+/* Filtros Adicionais */
+.additional-filters {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.filter-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+.filter-group label {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Mensagem de Nenhum Resultado */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 40px 0;
+}
+
+.no-results h3 {
+  font-family: "Playfair Display", serif;
+  color: #FFCF79;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+.no-results p {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Responsive Design para Filtros */
+@media (max-width: 768px) {
+  .filters-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .search-bar,
+  .filter-dropdown {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .filter-actions {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+  
+  .filter-row {
+    flex-direction: column;
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+  
+  .filters-header h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+
+
+/* Filter Dropdown Select */
+.dropdown-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropdown-select:hover {
+  border-color: #FFCF79;
+}
+
+.dropdown-select:focus {
+  outline: none;
+  border-color: #FFCF79;
+  box-shadow: 0 0 0 3px rgba(255, 207, 121, 0.1);
+}
+
+/* Price Filter */
+.price-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.price-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.price-input:hover {
+  border-color: #FFCF79;
+}
+
+.price-input:focus {
+  outline: none;
+  border-color: #FFCF79;
+  box-shadow: 0 0 0 3px rgba(255, 207, 121, 0.1);
+}
+
+.price-filter span {
+  color: #666;
+  font-weight: 500;
+}
+
+.filter-link {
+  background: none;
+  border: none;
+  color: #FFCF79;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.filter-link:hover {
+  color: #FFB969;
+  text-decoration: underline;
+}
+
+.total-properties {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+/* Advanced Filters */
+.advanced-filters {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.advanced-filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-label {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.advanced-toggle {
+  font-weight: 600 !important;
+  transition: all 0.3s ease;
+}
+
+.advanced-toggle:hover {
+  transform: translateY(-1px);
+}
+
+.clear-btn {
+  color: #ff4444 !important;
+}
+
+.clear-btn:hover {
+  color: #cc0000 !important;
+}
+
+@media (max-width: 768px) {
+  .advanced-filters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advanced-filters {
+    padding: 16px;
+  }
+}
+
+/* Improved Filter Bar Structure */
+.filter-bar-improved {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin-bottom: 30px;
+}
+
+.filter-row-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.search-container-full {
+  width: 100%;
+}
+
+.search-container-full .search-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: #333;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.search-container-full .search-input:focus {
+  outline: none;
+  border-color: #FFCF79;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 207, 121, 0.1);
+}
+
+.search-container-full .search-input::placeholder {
+  color: #999;
+}
+
+.filters-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.dropdown-select-inline {
+  min-width: 140px;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-select-inline:hover {
+  border-color: #FFCF79;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.dropdown-select-inline:focus {
+  outline: none;
+  border-color: #FFCF79;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 207, 121, 0.2);
+}
+
+.dropdown-select-inline:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #e9ecef;
+}
+
+.filter-toggle-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #FFCF79 0%, #FFB969 100%);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  margin-left: auto;
+  box-shadow: 0 2px 8px rgba(255, 207, 121, 0.3);
+}
+
+.filter-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 207, 121, 0.4);
+  background: linear-gradient(135deg, #FFB969 0%, #FFA759 100%);
+}
+
+.filter-toggle-btn:active {
+  transform: translateY(0);
+}
+
+.filter-clear-btn {
+  padding: 12px 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-clear-btn:hover {
+  border-color: #9ca3af;
+  background: #f3f4f6;
+  color: #374151;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-clear-btn:active {
+  transform: translateY(0);
+}
+
+/* Advanced Filters Panel */
+.advanced-filters-panel {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 20px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.3s ease-out;
+}
+
+.advanced-filters-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-group-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 150px;
+}
+
+.filter-group-inline label {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #495057;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-group-inline .dropdown-select-inline,
+.filter-group-inline input[type="number"] {
+  width: 100%;
+  min-width: 150px;
+}
+
+.filter-group-inline input[type="number"] {
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group-inline input[type="number"]:hover {
+  border-color: #FFCF79;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.filter-group-inline input[type="number"]:focus {
+  outline: none;
+  border-color: #FFCF79;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 207, 121, 0.1);
+}
+
+.range-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.range-inputs input {
+  flex: 1;
+  min-width: 80px;
+}
+
+.range-separator {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6c757d;
+  padding: 0 4px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .filter-bar-improved {
+    padding: 20px;
+  }
+
+  .filters-row {
+    gap: 10px;
+  }
+
+  .dropdown-select-inline {
+    min-width: 120px;
+    font-size: 13px;
+  }
+
+  .filter-toggle-btn,
+  .filter-clear-btn {
+    font-size: 13px;
+    padding: 9px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-bar-improved {
+    padding: 16px;
+  }
+
+  .filters-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .dropdown-select-inline,
+  .filter-toggle-btn,
+  .filter-clear-btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .filter-toggle-btn {
+    margin-left: 0;
+  }
+
+  .advanced-filters-panel {
+    padding: 16px;
+  }
+
+  .advanced-filters-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filter-group-inline {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .filter-group-inline .dropdown-select-inline,
+  .filter-group-inline input[type="number"] {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .range-inputs {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-bar-improved {
+    padding: 12px;
+  }
+
+  .filter-row-main {
+    gap: 12px;
+  }
+
+  .filters-row {
+    gap: 8px;
+  }
+
+  .search-container-full .search-input {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+  .dropdown-select-inline {
+    font-size: 13px;
+    padding: 9px 12px;
+    padding-right: 32px;
+  }
+
+  .filter-toggle-btn,
+  .filter-clear-btn {
+    font-size: 13px;
+    padding: 9px 14px;
+  }
+
+  .advanced-filters-panel {
+    padding: 12px;
+  }
+
+  .filter-group-inline label {
+    font-size: 11px;
+  }
+
+  /* Mobile-specific improvements */
+  .real-estate-card {
+    margin: 0 4px;
+    border-radius: 8px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .slider-container {
+    height: 180px;
+  }
+
+  .propoerty-body {
+    padding: 12px;
+  }
+
+  .property-location-text {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .detail-value {
+    font-size: 12px;
+  }
+
+  .price-value {
+    font-size: 18px;
+  }
+
+  .more-details-button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .more-details-text {
+    font-size: 11px;
+  }
+
+  /* Reduce card content size */
+  .property-type-text {
+    font-size: 11px;
+  }
+
+  .detail-unit {
+    font-size: 10px;
+  }
+
+  .detail-label {
+    font-size: 9px;
+  }
+
+  .re-details {
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .real-estate-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Touch-friendly buttons */
+  .favorite-button {
+    width: 48px;
+    height: 48px;
+    top: 12px;
+    right: 12px;
+  }
+
+  .slider-arrow-left,
+  .slider-arrow-right {
+    width: 44px;
+    height: 44px;
+  }
+
+  .slider-arrow-left {
+    left: 12px;
+  }
+
+  .slider-arrow-right {
+    right: 12px;
+  }
+
+  /* Mobile navigation improvements */
+  .imoveis-page {
+    padding-top: 70px;
+  }
+
+  .titulo-secao {
+    padding: 20px 12px;
+  }
+
+  .titulo-principal {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .imoveis-container {
+    padding: 0 8px;
+    gap: 16px;
+  }
+
+  /* Mobile filter improvements */
+  .filter-bar-improved {
+    margin: 0 8px 20px 8px;
+    border-radius: 8px;
+  }
+
+  .search-container-full .search-input {
+    border-radius: 6px;
+  }
+
+  .dropdown-select-inline {
+    border-radius: 6px;
+  }
+
+  .filter-toggle-btn,
+  .filter-clear-btn {
+    border-radius: 6px;
+  }
+
+  /* Mobile card spacing */
+  .imoveis-em-destaque {
+    padding: 20px 0;
+  }
+
+  .container {
+    padding: 0 8px;
+  }
+
+  /* Mobile loading state */
+  .loading-container {
+    padding: 40px 16px;
+  }
+
+  .loading-container p {
+    font-size: 16px;
+  }
+
+  /* Mobile error message */
+  .error-message {
+    margin: 16px 8px;
+    padding: 12px 16px;
+    border-radius: 6px;
+  }
+
+  .error-message p {
+    font-size: 14px;
+  }
+
+  .error-message small {
+    font-size: 12px;
+  }
+
+  /* Mobile no properties message */
+  .no-properties-message {
+    margin: 20px 8px;
+    padding: 40px 16px;
+    border-radius: 8px;
+  }
+
+  .no-properties-message h3 {
+    font-size: 20px;
+  }
+
+  .no-properties-message p {
+    font-size: 14px;
+  }
+
+  /* Extra small screens - further reduce card size */
+  .imoveis-container {
+    gap: 12px;
+    padding: 0 4px;
+  }
+
+  .real-estate-card {
+    margin: 0 2px;
+    border-radius: 6px;
+  }
+
+  .slider-container {
+    height: 160px;
+  }
+
+  .propoerty-body {
+    padding: 10px;
+  }
+
+  .property-location-text {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  .detail-value {
+    font-size: 11px;
+  }
+
+  .price-value {
+    font-size: 16px;
+  }
+
+  .more-details-button {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .more-details-text {
+    font-size: 10px;
+  }
+
+  .property-type-text {
+    font-size: 10px;
+  }
+
+  .detail-unit {
+    font-size: 9px;
+  }
+
+  .detail-label {
+    font-size: 8px;
+  }
+
+  .re-details {
+    gap: 3px;
+    margin-bottom: 4px;
+  }
+
+  .real-estate-icon {
+    width: 10px;
+    height: 10px;
+  }
+
+  .favorite-button {
+    width: 40px;
+    height: 40px;
+    top: 8px;
+    right: 8px;
+  }
+
+  .slider-arrow-left,
+  .slider-arrow-right {
+    width: 36px;
+    height: 36px;
+  }
+
+  .slider-arrow-left {
+    left: 8px;
+  }
+
+  .slider-arrow-right {
+    right: 8px;
+  }
+}
